@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
       </header>
         <div className="searchbar">
             <input type="search"/>
-            <button>Search</button>
+            <button onClick={searchGiphy}>Search</button>
         </div>
 
         <div className="results">
@@ -17,6 +16,10 @@ function App() {
         </div>
     </div>
   );
+}
+let list = [];
+function searchGiphy() {
+    return list.map(gif => <img src={gif.url} />)
 }
 
 export default App;
