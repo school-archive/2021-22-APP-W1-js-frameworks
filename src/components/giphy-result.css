@@ -1,0 +1,7 @@
+.giphy-result > img {
+    width: 100%;
+    object-fit: cover;
+    transition: .2s width,height;
+}
+
+.giphy-result:hover > img {}

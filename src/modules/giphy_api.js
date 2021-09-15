@@ -13,11 +13,14 @@ export async function searchGif(text, limit = 10, lang = 'en') {
     const res = await axios.get('https://api.giphy.com/v1/gifs/search', {
         params: {
             'api_key': api_key,
-            'q': text
+            'q': text,
+            'rating': 'R'
         }
     });
 
+    console.log(res)
+
     return res.data.data.map(
-        ({title, images}) => ({title, url: images[0].url})
+        ({title, images}) => ({title, url: images.original.url})
     );
 }
