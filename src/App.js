@@ -1,14 +1,19 @@
 import './App.css';
 import {searchGif} from './modules/giphy_api.js';
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {searchText: ''};
+  }
+  
   return (
     <div className="app">
       <header className="app-header">
         <h1>Search GIPHY</h1>
       </header>
         <div className="searchbar">
-            <input type="search"/>
+            <input type="search" onChange={this.}/>
             <button onClick={searchGiphy}>Search</button>
         </div>
 
@@ -20,7 +25,7 @@ function App() {
 }
 let list = [];
 function searchGiphy() {
-    return list.map(gif => <img src={gif.url} />)
+    return await searchGif().map(gif => <img src={gif.url} />)
 }
 
 export default App;
