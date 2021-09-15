@@ -9,6 +9,7 @@ class App extends React.Component {
             searchText: '',
             searchResults: [],
         };
+        this.handleKey = this.handleKey.bind(this);
     }
 
     render() {
@@ -18,7 +19,7 @@ class App extends React.Component {
                     <h1>Search GIPHY</h1>
                 </header>
                 <div className="searchbar">
-                    <input type="search" onChange={e => this.setState({searchText: e.target.value})}/>
+                    <input type="search" onKeyDown={this.handleKey} onChange={e => this.setState({searchText: e.target.value})}/>
                     <button onClick={() => this.startSearch()}>Search</button>
                 </div>
 
@@ -34,6 +35,12 @@ class App extends React.Component {
         let searchResults = (await searchGif(this.state.searchText)).map(gif => <img src={gif.url}/>);
         console.log(searchResults)
         this.setState({searchResults})
+    }
+
+    handleKey(event) {
+        if (event.key === "Enter") {
+            this.startSearch();
+        }
     }
 
 }
