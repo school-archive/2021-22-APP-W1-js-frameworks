@@ -23,9 +23,11 @@ class App extends React.Component {
                     <button onClick={() => this.startSearch()}>Search</button>
                 </div>
 
-                <div className="results">
-                    {this.state.searchResults}
-                </div>
+                {
+                    this.state.searchResults.length
+                    ? <div className="results">{this.state.searchResults}</div>
+                    : <div>Nothing to show</div>
+                }
             </div>
         );
     }
