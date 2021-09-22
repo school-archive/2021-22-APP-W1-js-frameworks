@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api_key = 'Ru14jmJZcroXpouKn3iOvAFbdNi4PcAo';
+const api_key = process.env.REACT_APP_GIPHYKEY;
 
 /**
  * Searches GIFs on the Giphy API according to a search term
