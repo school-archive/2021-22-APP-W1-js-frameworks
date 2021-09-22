@@ -6,22 +6,21 @@
 
 - Repository anlegen ✔
 - React installieren & initialisieren ✔
-- React Überblick verschaffen
-- Beginnen mit Components
+- React Überblick verschaffen ✔
+- Beginnen mit Components ✔
 
 ## 22.09.2021
 
-- API Anbindung
-  - Modul/Klasse
-- Components
-  - App  mit Header
-  - Search
-  - GIF
-  - Search History
+- API Anbindung ✔
+  - Modul/Klasse ✔
+- Components ✔
+  - App  mit Header ✔
+  - Search ✔
+  - GIF ✔
 
 ## 29.09.2021
 
 - Components
   - vll. Routing
-    - Hauptseite
+    - Hauptseite ✔
     - Info Seite
