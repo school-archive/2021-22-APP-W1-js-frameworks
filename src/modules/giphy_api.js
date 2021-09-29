@@ -14,7 +14,7 @@ export async function searchGif(text, limit = 10, lang = 'en') {
         params: {
             'api_key': api_key,
             'q': text,
-            'rating': 'R'
+            'rating': 'pg'
         }
     });
 
