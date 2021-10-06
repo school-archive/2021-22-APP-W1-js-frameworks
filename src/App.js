@@ -1,6 +1,7 @@
 import './App.css';
 import {searchGif} from './modules/giphy_api.js';
 import React from "react";
+import GiphyResult from "./components/GiphyResult";
 
 class App extends React.Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class App extends React.Component {
 
     async startSearch() {
         console.log(this)
-        let searchResults = (await searchGif(this.state.searchText)).map(gif => <img src={gif.url}/>);
+        let searchResults = (await searchGif(this.state.searchText)).map(gif => <GiphyResult url={gif.url}/>);
         console.log(searchResults)
         this.setState({searchResults})
     }

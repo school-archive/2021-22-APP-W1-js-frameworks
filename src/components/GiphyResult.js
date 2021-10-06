@@ -8,9 +8,7 @@ class GiphyResult extends React.Component {
     }
     render() {
         return (
-            <div className="giphy-result">
-                <img src={this.props.url}/>
-            </div>
+            <img src={this.props.url}/>
         );
     }
 }
